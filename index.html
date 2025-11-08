@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>One2World Directory</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>One2World Directory</h1>
+<p>BIGO ID, Facebook, Instagram, TikTok တစ်ခုခုကို ရိုက်ပြီး ရှာလိုက်ယုံနဲ့ သင့်ရဲ့ Celi တစ်ယောက်ကိုပြန်တွေ့နိုင်ပါပြီ</p>
+</header>
+
+
+<section class="instructions">
+<div class="instructions-title">📝 မှတ်ချက်များ</div>
+<ul>
+<li>TikTok/Instagram/Facebook → username ပဲ (link ထည့်ရင်လည်း အလိုအလျောက် ချုပ်ထုတ်ပေးမယ်)</li>
+<li>Telegram user ကို Mini App ကနေ အလိုအလျောက် ယူတယ်</li>
+</ul>
+</section>
+
+
+<section class="search-box">
+<input id="searchInput" class="search-input" placeholder="BIGO ID, Facebook, Instagram, TikTok ကိုရိုက်ကြည့်ပါ..." />
+<button class="btn primary" id="searchBtn">🔍 ရှာမယ်</button>
+<button class="btn success" id="addBtn">➕ အသစ်ထည့်မယ်</button>
+<button class="btn warning" id="reloadBtn">🔄 Reload Data</button>
+</section>
+
+
+<section class="samples" id="samples"></section>
+
+
+<section class="card host-card" id="hostResult" hidden>
+<div class="host-header">
+<img id="hostAvatar" class="host-avatar" alt="Profile" />
+<div class="host-info">
+<div id="hostName" class="host-name">—</div>
+<div class="host-bigo-id">🆔 BIGO ID: <span id="hostBigoId">—</span></div>
+</div>
+</div>
+<div class="social-links" id="socialLinks"></div>
+</section>
+
+
+<section class="card empty" id="noResult" hidden>
+<div class="emoji">😔</div>
+<strong>ရှာလို့မတွေ့ပါ</strong>
+<div class="hint">နမူနာ ID များကိုစမ်းရှာကြည့်ကြည့်ပါ</div>
+<button class="btn success small" id="addFromNoResult">➕ ဒီအချက်အလက်ကို သိမ်းမယ်</button>
+</section>
+
+
+<section class="card" id="formCard" hidden>
+<h2 class="form-title">အသစ်ထည့်ရန် / Update</h2>
+
+
+<div class="grid">
+<label class="field">
+<span>Name *</span>
+<input id="fName" />
+</label>
+<label class="field">
+<span>BIGO ID *</span>
+<input id="fBigo" />
+</label>
+</div>
+
+
+<div class="uploader">
+<input type="file" id="avatarInput" accept="image/*" />
+<img id="avatarPreview" class="avatar-preview" alt="Preview" hidden />
+<button class="btn danger small" id="removePhoto" hidden>❌ ဓာတ်ပုံ ဖျက်မယ်</button>
+</div>
+
+
+<div class="grid">
+<label class="field"><span>Facebook</span><input id="fFacebook" placeholder="username or link" /></label>
+<label class="field"><span>Instagram</span><input id="fInstagram" placeholder="username or link" /></label>
+<label class="field"><span>TikTok</span><input id="fTiktok" placeholder="@username or link" /></label>
+<label class="field"><span>Telegram</span><input id="fTelegram" placeholder="username" /></label>
+<label class="field"><span>YouTube</span><input id="fYoutube" placeholder="@handle or link" /></label>
+</div>
+
+
+<div class="row">
+<button class="btn" id="cancelForm">မထည့်တော့ပါ</button>
+<button class="btn success" id="submitForm">အတည်ပြုပြီးပို့မယ်</button>
+</div>
+</section>
+
+
+<div id="loading" class="loading" hidden>🔄 Loading...</div>
+<div id="toast" class="toast" hidden>—</div>
+</div>
+
+
+<script src="utils.js"></script>
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
