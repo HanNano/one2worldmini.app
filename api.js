@@ -2,7 +2,7 @@ import { toast } from "./utils.js";
 
 // ====== CONFIG (You only edit here) ======
 export const CONFIG = {
-  SCRIPT_URL: "https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec",
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbz38QI85uEFuI1ctEIxdLW_mRVEf5rvZVLjOu3w_B-ffxOzATFNydWKRB90xm4_8Ea3Rw/exec",
   CLOUD_NAME: "daa1ab71e",       // ✅ your Cloudinary cloud name
   UPLOAD_PRESET: "one2world",    // ✅ your unsigned upload preset
 };
