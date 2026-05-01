@@ -1,0 +1,17 @@
+{
+  "name": "one2worldmini-app",
+  "version": "1.0.0",
+  "description": "One2World Directory - Telegram Mini App",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
